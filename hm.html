@@ -188,7 +188,40 @@ console.log(car1);
     //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
     //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 
-    function Cinderella
+    function Cinderella(name, age, foot) {
+        this.name = name;
+        this.age = age;
+        this.foot = foot;
+
+    }
+    let arrC = [ new Cinderella('N', 23, 34),
+        new Cinderella('X', 24, 35),
+        new Cinderella('Z', 25, 36),
+        new Cinderella('A', 26, 37),
+        new Cinderella('Q', 27, 38),
+        new Cinderella('E', 28, 39),
+        new Cinderella('F', 29, 40),
+        new Cinderella('V', 30, 41),
+        new Cinderella('T', 22, 42),
+        new Cinderella('E', 21, 43)];
+    function Prince(name, age, size) {
+        this.name = name;
+        this.age = age;
+        this.size = size;
+    }
+    let prince = new Prince('H', 33, 38);
+
+    let search = (arrC,prince) => {
+        for (const arrCElement of arrC) {
+            if (arrCElement.foot === prince.size) {
+                return `${arrCElement.name}`
+            }
+
+        }
+    }
+console.log(search(arrC, prince));
+let cind = arrC.find(value => value.foot === prince.size);
+    console.log(cind);
 
 
 </script>
